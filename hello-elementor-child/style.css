@@ -1,0 +1,445 @@
+/*
+Theme Name: Rockit Digital
+Theme URI: https://rockitdigital.com.au/
+Template: hello-elementor
+Author: Rockit Digital
+Author URI: https://rockitdigital.com.au/
+Description: A plain-vanilla &amp; lightweight theme for Elementor page builder
+Tags: flexible-header,custom-colors,custom-menu,custom-logo,featured-images,rtl-language-support,threaded-comments,translation-ready
+Version: 2.4.1.1634295890
+Updated: 2021-10-15 11:04:50
+
+*/
+
+.avb-cat-wrapper label.bigcheck {
+	position: relative;
+    left: -1.3em;
+}
+span.bigcheck-target {
+    font-family: 'font awesome 5 free';
+    font-size: 1em;   
+}
+input[type='checkbox'].bigcheck {     
+    position: relative;
+	left: -999em;
+}
+
+input[type='checkbox'].bigcheck + span.bigcheck-target:after {
+   content: "\f0c8"; /* In fontawesome, is an open square (fa-square-o) */
+}
+input[type='checkbox'].bigcheck:checked + span.bigcheck-target:after {
+content: "\f14a"; /* fontawesome checked box (fa-check-square-o) */
+}
+
+/* ==== optional - colors and padding to make it look nice === */
+
+span.bigcheck { 
+    display: block;
+    padding: 0.5em;;
+}
+
+/* Trainings Custom widgets Style */
+.avb-trainings-category-element{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.course-featured-img {
+    position: relative;
+    transition: all .5s ease-in-out;
+    height: 52%;
+    overflow: hidden;
+    width: 100%;
+    -webkit-box-align: center;
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.course-featured-img img {
+    width: 100%;
+	aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.avb-featured-image-overlay{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	transition-duration: 1500ms;
+}
+
+.avb-training-listing__item:hover .avb-featured-image-overlay {
+    background-color: rgba(0,0,0,.3);
+}
+
+.avb-training-listing__item{
+	background-color: #FFFFFF00;
+	box-shadow: 0px 0px 10px 0px rgb(143 143 143 / 50%);
+	height:100%;
+	border-radius: 8px;
+}
+.avb-training-listing-wrapper__content {
+    padding: 5px 15px;
+}
+.avb-cat-wrapper label, 
+.avb-cat-wrapper input[type=checkbox] {
+    cursor: pointer;
+}
+.div-buy-now {
+    /* float: left; */
+    /* width: 50%; */
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14px;
+}
+.div-buy-now a.btn-buy-now {
+    font-weight: bold;
+    color: #fff !important;
+    background: #d3472e;
+	font-size: 18px;
+    font-family: 'Work Sans';
+    padding: 8px 20px;
+    border-radius: 3px;
+    display: inline-block;
+	transition: all 0.5s ease-in-out;
+}
+.div-buy-now a.btn-buy-now:hover {
+	background: #902b19
+}
+.div-buy-now {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14px;
+    align-items: center;
+}
+.avb-training-listing__item {
+    height: 20rem;
+    overflow: hidden;
+
+}
+.wiz-b-text-link-arrow {
+    width: 1.4em;
+    height: 1.4em;
+    margin-top: 0.14em;
+    margin-left: 0.83em;
+}
+.course-short-description {
+    overflow: hidden;
+    height: 4.6rem;
+}
+.visible-box {
+    height: 6rem;
+}
+h6.avb-training-listing__title {
+    height: 4.2rem;
+	overflow: hidden;
+	margin-bottom: 2px;
+	padding-top: 4px;
+	font-weight: bold;
+    font-size: 18px;
+    font-family: 'Work Sans';
+}
+a.btn-learn-more {
+    display: flex;
+}
+a.btn-learn-more:hover {
+    text-decoration: underline;
+}
+.hidden-box {
+    opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+.avb-training-listing__item:hover .hidden-box {
+	opacity: 1;
+}
+.avb-training-listing__item:hover .course-featured-img {
+    height: 22%;
+    transition: all 0.4s ease-in-out; 
+}
+
+#footer-section a .elementor-icon-list-text:hover {
+    color: #D3472E;
+}
+
+@media all and (min-width:1025px){
+	.avb-trainings-listing-wrapper__item{
+		display:grid;
+		grid-template-columns:repeat(3 ,1fr);
+		gap:30px;
+	}
+	
+}
+
+/* vertical only
+.avb-trainings-listing-wrapper__item {
+    display:block;
+
+}
+
+.avb-trainings-listing-wrapper__item .avb-training-listing__item .avb-featured-image-wrap{
+    min-height:400px;
+}
+
+.avb-training-listing__item{
+    height:auto;
+    margin-bottom:30px;
+} */
+
+
+
+
+
+.image-wrap{
+	position: relative !important;
+    transition: all .5s ease-in-out !important;
+    height: 60%;
+    overflow: hidden !important;
+    width: 100% !important;
+    -webkit-box-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    -webkit-box-pack: center !important;
+    justify-content: center !important;
+}
+.image-wrap img{
+	width:100% !important;
+	height: 100% !important;
+    object-fit: cover !important;
+}
+.related-training{
+	display: flex;
+    justify-content: space-between;
+	flex-wrap:wrap;
+}
+.training-card:hover .image-wrap{
+    height: 22% !important;
+    transition: all 0.4s ease-in-out !important; 
+}
+.training-card:hover .related-card-hidden{
+   opacity: 1;
+}
+.tabs-licenses-registration .elementor-toggle-item, .tabs-licenses-registration .elementor-tab-title {
+    border-radius: 15px;
+}
+.tabs-licenses-registration .elementor-tab-title {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+.related-training .training-card{
+	height: 24rem;
+    overflow: hidden;
+	width:31%;
+	border-radius: 8px;
+/* 	margin-right: 2%; */
+	float: left;
+	box-shadow: -4px 12px 43px 4px rgba(0,0,0,0.3);
+	-webkit-box-shadow: -4px 12px 43px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow: -4px 12px 43px 4px rgba(0,0,0,0.3);
+}
+.related-card-hidden{
+opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+.training-description {
+    padding: 20px;
+}
+.the-training-title{
+	font-size: 19px;
+    font-weight: 700;
+    line-height: 25px;
+	padding-bottom:15px;
+	height: 90px;
+}
+.the-training-des.related-card-hidden {
+    height: 50px !important;
+    overflow: hidden !important;
+    margin-bottom: 20px !important;
+}
+.the-training-price{
+	    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.5px;
+	padding-bottom:15px;
+}
+.the-training-des{
+padding-bottom:15px;	
+}
+.learn-more-button {
+	font-family: var( --e-global-typography-accent-font-family ), Sans-serif;
+    font-size: var( --e-global-typography-accent-font-size );
+    font-weight: var( --e-global-typography-accent-font-weight );
+    line-height: var( --e-global-typography-accent-line-height );
+    letter-spacing: var( --e-global-typography-accent-letter-spacing );
+    color: var( --e-global-color-5810a9b );
+    background-color: var( --e-global-color-primary );
+    border-radius: 10px 10px 10px 10px;
+	color:white !important;
+	text-align:center;
+}
+.learn-more-button a{
+	display:block !important;
+	color:white !important;
+	width:100% !important;
+	 padding: 15px 60px 15px 60px;
+}
+.training-card .learn-more-button:hover {
+    background: #902B19;
+}
+
+/********************************************* MEET OUR TEAM PAGE *************************/
+.team-member-image .elementor-widget-container:after {
+    background: url(https://frontoadvisory.com.au/wp-content/uploads/2022/02/cropped-High-res-icon-white0.jpg) no-repeat scroll 0 0/contain;
+    height: 50px;
+    width: 50px;
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+    border-radius: 50%;
+}
+.team-name-hover:hover {
+    opacity: 0.5;
+}
+
+
+@media all and (min-width:768px) and (max-width:1024px){
+
+	
+	.avb-trainings-listing-wrapper__item{
+		display:grid;
+		grid-template-columns:repeat(2 ,1fr);
+		gap:30px;
+	}
+	/* .avb-trainings-listing-wrapper__item .avb-training-listing__item .avb-featured-image-wrap{
+		min-height:270px;
+	} */
+	
+	.all-training-filter-section .avb-training-listing__item {
+		height: 16rem;
+	}
+	.all-training-filter-section h6.avb-training-listing__title {
+		height: 3.8rem;
+	}
+	
+}
+
+
+
+@media all and (min-width:768px){
+	.avb-trainings-listing-wrapper {
+		display:flex;
+		justify-content:space-between;
+	}
+
+	.avb-trainings-listing-wrapper {
+		display:flex;
+		justify-content:flex-start;
+	}
+	
+	.avb-trainings-category-listing-wrapper{
+	  flex:0 0 25%;  
+	}
+
+	/* vertical only
+	.avb-trainings-listing-wrapper__item{
+		flex: 0 0 57%;
+	} */
+	
+}
+
+@media all and (max-width:767px){
+	
+	.avb-training-listing__item{
+		margin-bottom: 30px;
+	}
+
+	.avb-trainings-listing-wrapper__item .avb-training-listing__item .avb-featured-image-wrap{
+		min-height:200px;
+	}
+
+	/* vertical only
+	.avb-trainings-listing-wrapper__item .avb-training-listing__item .avb-featured-image-wrap{
+		min-height:150px;
+	} */
+	.course-featured-img {
+		height: 56%;
+	}
+	h6.avb-training-listing__title {
+		padding-top: 0;
+	}
+	.related-training .image-wrap {
+		height: 52%;
+	}
+	.training-card{
+		height: 20rem;
+	}
+	.the-training-title{
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 23px;
+		padding-bottom: 15px;
+		height: 4.2rem;
+		overflow: hidden;
+	}
+	.avb-trainings-category-row {
+		float: left;
+		width: 50%;
+/* 		margin-right: 2%; */
+	}
+	div#fronto-training-listing-wrapper {
+		clear: both;
+	}
+}
+
+@media all and (max-width:375px){
+	
+	.avb-trainings-listing-wrapper__item .avb-training-listing__item .avb-featured-image-wrap{
+		min-height:180px;
+	}
+}
+
+@media all and (max-width:320px){
+	
+	.avb-trainings-listing-wrapper__item .avb-training-listing__item .avb-featured-image-wrap{
+		min-height:150px;
+	}	
+}
+
+
+
+
+
+/* custom css */
+
+
+@media all and (max-width:414px){
+	
+.related-training .training-card{
+	width:100%;
+	margin:0 auto 30px;
+}
+}
+
+	@media all and (min-width:415px) and (max-width:960px){
+
+	.related-training .training-card{
+	width:48%;
+	margin-bottom:30px;
+}
+	.learn-more-button a{
+	display:block !important;
+	color:white !important;
+	width:100% !important;
+	 padding: 15px 30px 15px 30px;
+}
+
+}
+
+
+/* custom css */
+
